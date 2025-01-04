@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Small screen optimization using media query */
+@media (max-width: 768px) {
+    .fixed {
+      padding: 20px; /* Adjust padding for smaller screens */
+    }
+  
+    .w-full {
+      width: 100%; /* Full width on small screens */
+    }
+  
+    .h-auto {
+      height: auto; /* Maintain aspect ratio */
+    }
+  
+    .font-bold {
+      font-size: 24px; /* Adjust font sizes */
+      line-height: 32px;
+    }
+  
+    .text-base {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  
+    .bg-white {
+      padding: 10px; /* Small button padding */
+      border-radius: 32px;
+    }
+  
+    .text-lg {
+      font-size: 18px; /* Adjusted font size */
+      line-height: 28px;
+    }
+  
+    /* Ensure full width for all smaller elements */
+   
+}
+
+
+.text-gradient {
+  background: linear-gradient(to right, #ff2626, #ff6730);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 28px;
+  font-weight: extrabold;
+  text-transform: capitalize;
+  line-height: 72.01px;
+}
+
+@media (min-width: 1024px) {
+  .text-gradient {
+    font-size: 5xl;
+  }
+}
+
+
+
+
