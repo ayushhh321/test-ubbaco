@@ -1,0 +1,5 @@
+name = "survey-form-main" # Update with your actual app/project name
+compatibility_date = "2025-01-04" # Use today's date to ensure compatibility with the latest Workers runtime features
+compatibility_flags = ["nodejs_compat"] # Required for Node.js compatibility
+pages_build_output_dir = ".vercel/output/static" # Output directory for Cloudflare Pages
+

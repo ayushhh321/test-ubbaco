@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+import { setupDevPlatform } from "@cloudflare/next-on-pages/next-dev";
 const path = require("path");
 
 const nextConfig: NextConfig = {
@@ -25,6 +26,14 @@ const nextConfig: NextConfig = {
       allowedOrigins: ["https://your-allowed-origin.com"], // Specify allowed origins
     },
   },
+
+  // Ensure all server-rendered routes use the Edge Runtime
+  runtime: "experimental-edge",
 };
+
+// Enable Cloudflare Pages development platform in dev environment
+if (process.env.NODE_ENV === "development") {
+  setupDevPlatform();
+}
 
 export default nextConfig;
